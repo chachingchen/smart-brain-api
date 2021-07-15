@@ -35,10 +35,10 @@ app.get('/', (req, res) => {
 app.post('/signin', (req, res) => {
 	// Load hash from your password DB.
 	bcrypt.compare("0112", '$2a$10$oIU816U7LmWj2zKaH4iQfunB6vGDvgMaEY3baIaL6lLW3094FWdGS', function(err, res) {
-	    console.log('1st compare:  ',res);
+	    //console.log('1st compare:  ',res);
 	});
 	bcrypt.compare("veggies", '$2a$10$oIU816U7LmWj2zKaH4iQfunB6vGDvgMaEY3baIaL6lLW3094FWdGS', function(err, res) {
-	    console.log('2nd compare:  ',res);
+	    //console.log('2nd compare:  ',res);
 	});
 	if(req.body.email === database.users[0].email &&
 		req.body.password === database.users[0].password) {
@@ -60,7 +60,6 @@ app.post('/register', (req, res) => {
 			id: '125',
 			name: name,
 			email: email,
-			password: password,
 			entries: 0,
 			joined: new Date()
 		}
