@@ -6,7 +6,7 @@ const handleRegister= (req, res, db, bcrypt) => {
 		return res.status(400).json('incorrect form submission');
 	}
 	if (password.length < 4) {
-		return res.status(400).alert('password length should be 4 characters or longer');
+		return res.status(400).json('password length should be 4 characters or longer');
 	}
 
 	if (!validator.isEmail(email)) {
