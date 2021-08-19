@@ -1,0 +1,5 @@
+show user rank:
+1.add nav link in home route
+2.new component with table show ranking
+3. SQL: select entry from users order by entry;
+
